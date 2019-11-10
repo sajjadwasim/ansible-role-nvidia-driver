@@ -1,0 +1,10 @@
+---
+## playbook to install a package
+
+- hosts: all
+  become: yes
+  become_user: root
+  gather_facts: no
+  roles:
+    - role: uchida.nvidia-driver
+      nvidia_driver_repo: nvidia
